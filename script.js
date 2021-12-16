@@ -41,7 +41,21 @@ btn.addEventListener('click', () => {
   
   }
   
-  outputEl.innerHTML = password;
+  if(password !== undefined){
+    let isUndefined = false;
+    let z = '';
+    for(let i = 0; i < 9; i++){
+      z += password[i]
+    }
+    if(z !== 'undefined'){
+    outputEl.innerHTML = password;
+    console.log(password);
+    }else{
+      alert('ERROR!');
+    }
+  }else{
+    outputEl.innerHTML = 'Invalid!';
+  }
   
 });
 
