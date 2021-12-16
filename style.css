@@ -44,4 +44,16 @@ body{
   border: 3px solid black;
   border-radius: 50px;
   margin-top: 20px;
+  transition: 0.3s;
+}
+
+.generate-button:active{
+  opacity: 50%;
+}
+
+.output{
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+  overflow: auto;
 }
