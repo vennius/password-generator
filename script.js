@@ -16,6 +16,7 @@ btn.addEventListener('click', () => {
   let pwLength = parseInt(inputEl.value);
   let password = '';
   
+  if(pwLength <= 30){
   for(let i = 0; i < pwLength; i++){
     
   let x = '';
@@ -51,10 +52,14 @@ btn.addEventListener('click', () => {
     outputEl.innerHTML = password;
     console.log(password);
     }else{
-      alert('ERROR!');
+      outputEl.innerHTML = '<b>Sorry, You must choose one of the choices!</b>';
     }
   }else{
     outputEl.innerHTML = 'Invalid!';
+  }
+  
+  }else{
+    outputEl.innerHTML = '<b>Sorry, Maximal length is 30!</b>';
   }
   
 });
